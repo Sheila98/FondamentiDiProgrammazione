@@ -10,26 +10,12 @@ package it.unibs.fp.lab.veicoli;
 class Scooter extends Motoveicolo {
 	
 	private final static int NUMERO_RUOTE = 2;
-	
-	
-	/**
-	 * @param cilindrata
-	 * @param limiteCilindrata
-	 * @param alimentazione
-	 * @param numeroMassimoPasseggeri
-	 * @param numeroRuote
-	 * @param numeroRapporti
-	 * @param litriCarburante
-	 * @param targa
-	 * @throws NumeroDiRuoteNonValido
-	 */
-	public Scooter(double cilindrata, double limiteCilindrata, Alimentazione alimentazione, int numeroMassimoPasseggeri,
-			int numeroRuote, int numeroRapporti, double litriCarburante, String targa) throws NumeroDiRuoteNonValido, CilindrataNonValida 
-	{
-		super(cilindrata, limiteCilindrata, alimentazione, numeroMassimoPasseggeri, numeroRuote, numeroRapporti,
-				litriCarburante, targa);
-		if(numeroRuote!=NUMERO_RUOTE)
-			throw new NumeroDiRuoteNonValido();
+
+	public Scooter(double cilindrata, Alimentazione alimentazione, int numeroPasseggeri,
+			int numeroRapporti, double litriCarburante, String targa) throws NumeroDiRuoteNonValido {
+		super(cilindrata, alimentazione, numeroPasseggeri, NUMERO_RUOTE, numeroRapporti, litriCarburante, targa);
 	}
+	
+
 
 }

@@ -9,64 +9,43 @@ package it.unibs.fp.lab.veicoli;
  */
 abstract class Veicolo {
 	
-	private double cilindrata;
-	private double limiteCilindrata;
-	private Alimentazione alimentazione;
-	private int numeroMassimoPasseggeri;
-	private int numeroRuote;
-	private int numeroRapporti;
-	private double litrtiCarburante;
-	private String targa;
+	private final double CILINDRATA;
+	private final Alimentazione ALIMENTAZIONE;
+	private final int NUMERO_MASSIMO_PASSEGGERI;
+	private final int NUMERO_RUOTE;
+	private final int NUMERO_RAPPORTI;
+	private final double LITRI_CARBURANTE;
+	private final String TARGA;
 	
-	public Veicolo(double cilindrata, double limiteCilindrata, Alimentazione alimentazione,int numeroMassimoPasseggeri, int numeroRuote, int numeroRapporti, double litriCarburante, String targa) {
-		this.cilindrata = cilindrata;
-		this.limiteCilindrata = limiteCilindrata;
-		this.alimentazione = alimentazione;
-		this.numeroMassimoPasseggeri = numeroMassimoPasseggeri;
-		this.numeroRuote = numeroRuote;
-		this.litrtiCarburante = litriCarburante;
-		this.targa = targa;
+	public Veicolo(double cilindrata, Alimentazione alimentazione,int numeroPasseggeri, int numeroRuote, int numeroRapporti, double litriCarburante, String targa) {
+		this.CILINDRATA = cilindrata;
+		this.ALIMENTAZIONE = alimentazione;
+		this.NUMERO_MASSIMO_PASSEGGERI = numeroPasseggeri;
+		this.NUMERO_RUOTE = numeroRuote;
+		this.NUMERO_RAPPORTI = numeroRapporti;
+		this.LITRI_CARBURANTE = litriCarburante;
+		this.TARGA = targa;
 	}
 	
 
 	/**
 	 * @return the cilindrata
 	 */
-	public final double getCilindrata() {
-		return cilindrata;
+	public final double getCILINDRATA() {
+		return CILINDRATA;
 	}
 
-
-
-	/**
-	 * @return the limiteCilindrata
-	 */
-	public final double getLimiteCilindrata() {
-		return limiteCilindrata;
-	}
 
 	
-	public final Alimentazione getAlimentazione() {
-		return alimentazione;
+	public final Alimentazione getALIMENTAZIONE() {
+		return ALIMENTAZIONE;
 	}
 	
-
-	/**
-	 * @return the numeroMassimoPasseggeri
-	 */
-	public final int getNumeroMassimoPasseggeri() {
-		return numeroMassimoPasseggeri;
-	}
-
-
-
-
-
 	/**
 	 * @return the numeroRuote
 	 */
-	public final int getNumeroRuote() {
-		return numeroRuote;
+	public final int getNUMERO_RUOTE() {
+		return NUMERO_RUOTE;
 	}
 
 
@@ -75,8 +54,8 @@ abstract class Veicolo {
 	/**
 	 * @return the numeroRapporti
 	 */
-	public final int getNumeroRapporti() {
-		return numeroRapporti;
+	public final int getNUMERO_RAPPORTI() {
+		return NUMERO_RAPPORTI;
 	}
 
 
@@ -84,8 +63,8 @@ abstract class Veicolo {
 	/**
 	 * @return the litrtiCarburante
 	 */
-	public final double getLitrtiCarburante() {
-		return litrtiCarburante;
+	public final double getLITRI_CARBURANTE() {
+		return LITRI_CARBURANTE;
 	}
 
 
@@ -93,9 +72,10 @@ abstract class Veicolo {
 	/**
 	 * @return the targa
 	 */
-	public final String getTarga() {
-		return targa;
+	public final String getTARGA() {
+		return TARGA;
 	}
+<<<<<<< HEAD
 
 
 	/**
@@ -107,5 +87,7 @@ abstract class Veicolo {
 
 
 	
+=======
+>>>>>>> e773c6abecac3abcd2b5d63b61f587008f0d0f54
 	
 }

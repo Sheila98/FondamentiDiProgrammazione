@@ -12,5 +12,5 @@ enum Alimentazione {
 	BENZINA,
 	GASOLIO,
 	GPL,
-	ELETTRICITA
+	ELETTRICITA;
 }
