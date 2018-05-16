@@ -105,8 +105,6 @@ abstract class Veicolo {
 		this.targa = targa;
 	}
 
-	
-	public 
 
 	
 	
