@@ -106,9 +106,7 @@ abstract class Veicolo {
 	}
 
 	
-	public final boolean cilindrataInRegola(double cilindrata) {
-		return (cilindrata<=limiteCilindrata)?true:false;
-	}
+	public 
 
 	
 	
