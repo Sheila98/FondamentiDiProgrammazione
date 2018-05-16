@@ -9,7 +9,7 @@ package it.unibs.fp.lab.veicoli;
  */
 class CilindrataNonValida extends Exception {
 	
-	private double cilindrataMassima;
+	private final double cilindrataMassima;
 	
 	private final static String ERR = "La cilindrata non e' valida: \nMassimo: %d";
 	

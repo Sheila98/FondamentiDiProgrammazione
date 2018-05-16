@@ -14,7 +14,7 @@ class Autovettura extends Autoveicolo{
 	public Autovettura(double cilindrata, Alimentazione alimentazione, int numeroPasseggeri,
 			int numeroRapporti, double litriCarburante, String targa) throws NumeroDiRuoteNonValido {
 		super(cilindrata, alimentazione, numeroPasseggeri, NUMERO_RUOTE, numeroRapporti, litriCarburante, targa);
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	

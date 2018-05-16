@@ -11,20 +11,24 @@ abstract class Veicolo {
 	
 	private final double CILINDRATA;
 	private final Alimentazione ALIMENTAZIONE;
-	private final int NUMERO_MASSIMO_PASSEGGERI;
+	private final int NUMERO_PASSEGGERI;
 	private final int NUMERO_RUOTE;
 	private final int NUMERO_RAPPORTI;
 	private final double LITRI_CARBURANTE;
 	private final String TARGA;
 	
-	public Veicolo(double cilindrata, Alimentazione alimentazione,int numeroPasseggeri, int numeroRuote, int numeroRapporti, double litriCarburante, String targa) {
+	private final static int NUMERO_MINIMO_PASSEGGERI = 1;
+	
+	public Veicolo(double cilindrata,  Alimentazione alimentazione,int numeroPasseggeri, int numeroRuote, int numeroRapporti, double litriCarburante, String targa) throws NumeroPasseggeriTroppoBasso {
 		this.CILINDRATA = cilindrata;
 		this.ALIMENTAZIONE = alimentazione;
-		this.NUMERO_MASSIMO_PASSEGGERI = numeroPasseggeri;
+		this.NUMERO_PASSEGGERI = numeroPasseggeri;
 		this.NUMERO_RUOTE = numeroRuote;
 		this.NUMERO_RAPPORTI = numeroRapporti;
 		this.LITRI_CARBURANTE = litriCarburante;
 		this.TARGA = targa;
+		if(numeroPasseggeri<NUMERO_MINIMO_PASSEGGERI)
+			throw new NumeroPasseggeriTroppoBasso(NUMERO_MINIMO_PASSEGGERI);
 	}
 	
 
@@ -35,10 +39,13 @@ abstract class Veicolo {
 		return CILINDRATA;
 	}
 
-
 	
 	public final Alimentazione getALIMENTAZIONE() {
 		return ALIMENTAZIONE;
+	}
+	
+	public final int getNUMERO_PASSEGGERI() {
+		return NUMERO_PASSEGGERI;
 	}
 	
 	/**
@@ -48,7 +55,7 @@ abstract class Veicolo {
 		return NUMERO_RUOTE;
 	}
 
-
+	
 
 
 	/**
@@ -75,19 +82,10 @@ abstract class Veicolo {
 	public final String getTARGA() {
 		return TARGA;
 	}
-<<<<<<< HEAD
 
-
-	/**
-	 * @param targa the targa to set
-	 */
-	protected final void setTarga(String targa) {
-		this.targa = targa;
+	
+	public int getNUMERO_MINIMO_PASSEGGERI() {
+		return NUMERO_MINIMO_PASSEGGERI;
 	}
 
-
-	
-=======
->>>>>>> e773c6abecac3abcd2b5d63b61f587008f0d0f54
-	
 }
