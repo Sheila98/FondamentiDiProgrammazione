@@ -9,12 +9,14 @@ package it.unibs.fp.lab.veicoli;
  */
 class Camion extends Autoveicolo {
 
-	private final static int NUMERO_MASSIMO_RUOTE;
+	private final static int NUMERO_RUOTE = 4;
+	private final static int NUMERO_MASSIMO_PASSEGGERI = 9;
 	
-	public Camion(double cilindrata, Alimentazione alimentazione, int numeroPasseggeri, int numeroRuote,
-			int numeroRapporti, double litriCarburante, String targa) throws NumeroDiRuoteNonValido {
-		super(cilindrata, alimentazione, numeroPasseggeri, numeroRuote, numeroRapporti, litriCarburante, targa);
-		
+	public Camion(double cilindrata, Alimentazione alimentazione, int numeroPasseggeri,
+			int numeroRapporti, double litriCarburante, String targa) throws NumeroPasseggeriTroppoAlto, NumeroRuoteTroppoBasso, NumeroPasseggeriTroppoBasso {
+		super(cilindrata, alimentazione, numeroPasseggeri, NUMERO_RUOTE, numeroRapporti, litriCarburante, targa);
+		if(numeroPasseggeri>NUMERO_MASSIMO_PASSEGGERI)
+			throw new NumeroPasseggeriTroppoAlto(NUMERO_MASSIMO_PASSEGGERI);
 	}
 	
 

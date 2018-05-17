@@ -13,15 +13,14 @@ class Booster extends Motoveicolo {
 	private final static double MASSIMA_CILINDRATA = 50;
 	private final static int NUMERO_PASSEGGERI = 1;
 
-	public Booster(double cilindrata, Alimentazione alimentazione,
-			int numeroRuote, int numeroRapporti, double litriCarburante, String targa) throws CilindrataNonValida 
+	public Booster(double cilindrata, Alimentazione alimentazione, int numeroRapporti, double litriCarburante, String targa) throws CilindrataNonValida, NumeroRuoteTroppoBasso, NumeroPasseggeriTroppoBasso, NumeroRuoteTroppoAlto, NumeroPasseggeriTroppoAlto 
 	{
-		super(cilindrata, alimentazione, NUMERO_PASSEGGERI, numeroRuote, numeroRapporti,
+		super(cilindrata, alimentazione, NUMERO_PASSEGGERI, NUMERO_RUOTE, numeroRapporti,
 				litriCarburante, targa);
 		if(cilindrata>MASSIMA_CILINDRATA)
 			throw new CilindrataNonValida(MASSIMA_CILINDRATA);
 	}
-
+	
 
 
 }
